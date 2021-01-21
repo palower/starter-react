@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './view.scss';
+import './edit.scss';
 
 class Profile extends React.Component{
     constructor(props) {
@@ -13,26 +13,21 @@ class Profile extends React.Component{
     }
     render() {
         return (
-            <div className="view-profile">
+            <div className="edit-profile">
                 <p>
-                    <strong>Name: </strong> {this.props.profileData.name}
+                    <strong>Name: </strong> <input type="text" defaultValue={this.props.profileData.name}/>
                 </p>
                 <p>
-                    <strong>Email: </strong> {this.props.profileData.email}
+                    <strong>Email: </strong> <input type="text" defaultValue={this.props.profileData.email}/>
                 </p>
                 <p>
-                    <strong>About: </strong> {this.props.profileData.about}
+                    <strong>About: </strong> <textarea type="text" value={this.props.profileData.about}/>
                 </p>
                 <p>
-                    <strong>Address: </strong> {this.props.profileData.address}
-                </p>
-                <p>
-                    <strong>Friends: </strong><br/> {this.props.profileData.friends && this.props.profileData.friends.map((friend, index) => (
-                        <span key={index}>{friend.name}<br/></span>
-                    ))}
+                    <strong>Address: </strong> <input type="text" defaultValue={this.props.profileData.address}/>
                 </p>
             </div>
-        );
+    );
     }
 }
 

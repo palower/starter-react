@@ -2,23 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './profile.scss';
 import Button from '../../components/button/Button';
-import ViewProfile from '../../components/profile/view';
+import ViewProfile from '../../components/profile/view/view';
+import EditProfile from '../../components/profile/edit/edit';
 
 class Profile extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {formState: true};
+        this.state = {
+            formState: true
+        };
+        this.toggleText = this.toggleText.bind(this);
     }
     static get propTypes() { 
         return { 
+            profileData: PropTypes.any
         }; 
     }
     toggleText() {
         this.setState(state => ({
             formState: !state.formState
         }));
-        console.log(this.state.formState);
-        // this.state.formState === "view" ? this.setState({formState: ""}) : this.setState({formState: "view"});
     }
     render() {
         // var friends = this.props.profileData.friends;
@@ -29,24 +32,9 @@ class Profile extends React.Component{
         return (
             <div className="profile">
                 <h1>Profile details:</h1>
-                <p><Button onClick={() => this.toggleText} text={this.state.formState ? "Edit Profile" : "Save"}/></p>
-
-                {this.state.formState ? <ViewProfile/> : <EditProfile/>}
-
-
-                <div className="edit-profile">
-                <p>
-                        <strong>Name: </strong> <input type="text" defaultValue={this.props.profileData.name}/>
-                    </p>
-                    <p>
-                        <strong>Email: </strong> <input type="text" defaultValue={this.props.profileData.email}/>
-                    </p>
-                    <p>
-                        <strong>About: </strong> <textarea type="text" value={this.props.profileData.about}/>
-                    </p>
-                    <p>
-                        <strong>Address: </strong> <input type="text" defaultValue={this.props.profileData.address}/>
-                    </p>
+                <p><Button onPress={this.toggleText} text={this.state.formState ? "Edit Profile" : "Save"}/></p>
+                <div className="formContainer">
+                    {this.state.formState ? <ViewProfile profileData={this.props.profileData}/> : <EditProfile profileData={this.props.profileData}/>}
                 </div>
             </div>   
         );

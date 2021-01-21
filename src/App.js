@@ -1,8 +1,8 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProfileHeader from './components/profile/header/header';
 import Navigation from './components/navigation/navigation';
 import Button from './components/button/Button'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './app.scss';
 import Home from './pages/home/home';
 import Profile from './pages/profile/profile';

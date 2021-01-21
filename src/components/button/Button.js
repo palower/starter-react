@@ -9,12 +9,13 @@ class Button extends React.Component{
     }
     static get propTypes() { 
         return { 
-            text: PropTypes.any
+            text: PropTypes.any,
+            onPress: PropTypes.any
         }; 
     }
     render() {
         return (
-            <button className="button">{this.props.text ? this.props.text : this.state.text}</button>
+            <button onClick={this.props.onPress} className="button">{this.props.text ? this.props.text : this.state.text}</button>
         );
     }
 }
