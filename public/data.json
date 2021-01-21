@@ -1,0 +1,35 @@
+{
+    "picture": "http://placehold.it/32x32",
+    "age": 36,
+    "eyeColor": "blue",
+    "name": "Paul Lower",
+    "gender": "male",
+    "company": "Avanade",
+    "email": "paul.w.lower@avanade.com",
+    "phone": "+1 (555) 555-5555",
+    "address": "2416 209th Pl NE, Sammamish, WA, 98074",
+    "about": "Elit Lorem laborum esse Lorem ipsum laboris in amet voluptate. Sunt aute occaecat sunt do non velit consequat exercitation mollit quis do do cupidatat incididunt. Cupidatat proident et fugiat Lorem id quis officia in. Sunt sit qui laboris cillum pariatur tempor excepteur laborum sit ipsum culpa laborum. Labore dolore amet nostrud magna nostrud commodo nostrud.\r\n",
+    "tags": [
+    "cupidatat",
+    "est",
+    "occaecat",
+    "mollit",
+    "exercitation",
+    "deserunt",
+    "anim"
+    ],
+    "friends": [
+    {
+        "id": 0,
+        "name": "Thiago Alcantara"
+    },
+    {
+        "id": 1,
+        "name": "Alison Becker"
+    },
+    {
+        "id": 2,
+        "name": "Virgil Van Dijk"
+    }
+    ]
+}
