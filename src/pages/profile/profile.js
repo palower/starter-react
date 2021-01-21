@@ -4,6 +4,7 @@ import './profile.scss';
 import Button from '../../components/button/Button';
 import ViewProfile from '../../components/profile/view/view';
 import EditProfile from '../../components/profile/edit/edit';
+import strings from '../../strings';
 
 class Profile extends React.Component{
     constructor(props) {
@@ -31,7 +32,7 @@ class Profile extends React.Component{
         // });
         return (
             <div className="profile">
-                <h1>Profile details:</h1>
+                <h1>{strings.profile.pageTitle}</h1>
                 <p><Button onPress={this.toggleText} text={this.state.formState ? "Edit Profile" : "Save"}/></p>
                 <div className="formContainer">
                     {this.state.formState ? <ViewProfile profileData={this.props.profileData}/> : <EditProfile profileData={this.props.profileData}/>}
