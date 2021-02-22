@@ -1,5 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Starter Kit
+This project is a ReactJS accelerator built based on commonly used functionality from previous projects. The repo is meant to get a dev (and team) quickly up and running with a base level of tools.
 
+## Tech used
+- ReactJS
+- SASS
+- HTML
+- JavaScript
+
+## Prebuilt Tools
+- Modular patterns for component re-use
+- External API connection with fetch
+- Local API connection to JSON file
+- Header and Navigation
+- Form with View and Edit modes
 ## Available Scripts
 
 In the project directory, you can run:
