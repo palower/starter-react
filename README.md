@@ -6,6 +6,8 @@ This project is a ReactJS accelerator built based on commonly used functionality
 - SASS
 - HTML
 - JavaScript
+- Bootstrap
+- Node
 
 ## Prebuilt Tools
 - Modular patterns for component re-use
